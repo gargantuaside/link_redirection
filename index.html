@@ -23,7 +23,7 @@
 /* ================== CONFIGURE THESE ================== */
 const FORM_URL   = "https://forms.office.com/r/Ln22GuAsUh?origin=lprLink"; // <-- put your MS Forms link here
 const TIMEZONE   = "Asia/Jakarta";
-const CUTOFF_H   = 09;      // 09:00
+const CUTOFF_H   = 17;      // 09:00
 const CUTOFF_M   = 01;
 /* ===================================================== */
 
@@ -97,7 +97,7 @@ function nextOpenWindowText(tz, hour, minute) {
     $btn.textContent = "Open the form now";
     $btn.onclick = () => location.href = FORM_URL;
     // auto-redirect after a brief pause
-    setTimeout(() => location.href = FORM_URL, 1200);
+    //setTimeout(() => location.href = FORM_URL, 1200);
     $next.textContent = `Closes today at ${String(CUTOFF_H).padStart(2,'0')}:${String(CUTOFF_M).padStart(2,'0')} (${TIMEZONE}).`;
   } else {
     $state.textContent = "Form is CLOSED";
