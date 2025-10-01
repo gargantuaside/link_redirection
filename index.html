@@ -107,4 +107,9 @@ function nextOpenWindowText(tz, hour, minute) {
     $next.textContent = nextOpenWindowText(TIMEZONE, CUTOFF_H, CUTOFF_M);
   }
 })();
+
+  // refresh page every 2 seconds (2000 ms)
+setInterval(() => {
+  location.reload();
+}, 2000);
 </script>
