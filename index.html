@@ -60,7 +60,7 @@ function nextOpenWindowText(tz, hour, minute) {
   const fmtDay = new Intl.DateTimeFormat('en-US', { timeZone: tz, weekday: 'short', day:'2-digit', month:'short', year:'numeric' });
   const dateTxt = fmtDay.format(tomorrow);
   const cutoffTxt = `${String(hour).padStart(2,'0')}:${String(minute).padStart(2,'0')}`;
-  return `Next window: 00:00–${cutoffTxt} (${tz}), ${dateTxt}.`;
+  return `Next window: 00:00–09:00 (${tz}), ${dateTxt}.`;
 }
 
 (async function main(){
@@ -111,5 +111,5 @@ function nextOpenWindowText(tz, hour, minute) {
   // refresh page every 2 seconds (2000 ms)
 setInterval(() => {
   location.reload();
-}, 2000);
+}, 3000);
 </script>
